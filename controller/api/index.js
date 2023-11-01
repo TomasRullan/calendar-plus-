@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const userRoutes = require('./userroutes');
+const profileRoutes = require('./profileroutes');
 const projectRoutes = require('./projectroutes');
 
 router.use('/users', userRoutes);
