@@ -1,14 +1,9 @@
-// const express = require('express');
-// const routes = require('./controllers');
-// const helpers = require('./utils/helpers');
-
-// const sequelize = require('./config/connection');
-// // unknown const missing not known when needed SequiilzeStore
+// unknown const missing not known when needed SequiilzeStore
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
+const routes = require('./controller');
 const helpers = require('./utils/helpers');
 
 const sequelize = require('./config/connection');
