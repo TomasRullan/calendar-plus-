@@ -1,10 +1,11 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User,Event} = require('../models');
 
 router.get('/', async (req, res) => {
+  console.log("anything")
   try {
     // Get all projects and JOIN with user data
-    const projectData = await Project.findAll({
+    const projectData = await Event.findAll({
       include: [
         {
           model: User,
@@ -12,7 +13,7 @@ router.get('/', async (req, res) => {
         },
       ],
     });
-
+console.log (projectData);
     // Serialize data so the template can read it
     const projects = projectData.map((project) => project.get({ plain: true }));
 
