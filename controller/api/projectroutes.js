@@ -1,15 +1,15 @@
 const router = require('express').Router();
-const { Event } = require('../../models');
+const { Calendar } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.post('/', withAuth, async (req, res) => {
   try {
-    const newEvent = await Event.create({
+    const newCalendar = await Calendar.create({
       ...req.body,
       user_id: req.session.user_id,
     });
 
-    res.status(200).json(newEvent);
+    res.status(200).json(newCalendar);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -17,7 +17,7 @@ router.post('/', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const projectData = await Event.destroy({
+    const projectData = await Calendar.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
