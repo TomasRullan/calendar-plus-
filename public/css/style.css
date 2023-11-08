@@ -12,13 +12,13 @@ body{
 display:flex;
 align-items: center;
 min-height: 100vh;
-background-color: #2a46e6;
+background-color: #e4e4e8;
 justify-content: center;
 }
 header .icons span{
 height: 37px;
 width: 36px;
-background-color: rgb(227, 224, 224);
+background-color: rgb(18, 1, 1);
 margin: 1 2px;
 line-height: 36px;
 border-radius: 50%;
@@ -26,7 +26,7 @@ cursor: pointer;
 }
 .wrapper{
 width: 450px;
-background-color: azure;
+background-color: rgb(1, 11, 11);
 border-radius: 20px;
 }
 .wrapper header{
@@ -49,7 +49,7 @@ header .icons span:last-child{
 
 }
 header .icons span:hover{
-    background-color: azure;
+    background-color: rgb(1, 19, 19);
 }
 .calendar ul li{
     width: calc(100% /7);
@@ -77,7 +77,7 @@ position: relative;
     content: "";
     height: 40px;
     width: 40px;
-    background-color: azure;
+    background-color: rgb(1, 7, 7);
     top: 60%;
     left: 55%;
     transform: translate(-60%, -60%);
@@ -85,13 +85,13 @@ position: relative;
     z-index: -1;
 }
 .days li:hover::before{
-    background-color: rgb(227, 224, 224);;
+    background-color: rgb(18, 2, 2);;
 }
 .days li.inactive{
-    color: #aaa;
+    color: #0c0202;
 }
 .days li.active::before{
-    background-color: #e669a8;
+    background-color: #6974e6;
 }
 .days li.active{
     color:#fff
